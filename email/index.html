@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Почта</title>
+</head>
+<body>
+	<!-- Создаём форму -->
+    <form action="#" method="post" class="contacts-form"> <!-- action - заглушка, method - получить -->
+    <!-- input c данными которые хотим получить от пользователя -->  
+        <input name="name" type="text" required placeholder="Ваше имя"> <!-- name - нужно в php коде, type - для того чтобы пользователь вводил правильные данные, required - поле обязательно для заполнения, placeholder - запись в поле -->  
+        <input name="phone" type="number" required placeholder="Ваш телефон">
+        <input name="email" type="email" required placeholder="Ваш e-mail">
+        <!-- поле для ввода сообщения -->
+        <textarea name="text" type="text" class="message" id="ta" placeholder="Ваше сообщение"></textarea>
+        <!-- кнопка для отправки формы -->
+        <button type="submit" class="button-popup">Оставить сообщение</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

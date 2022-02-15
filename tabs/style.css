@@ -1,0 +1,63 @@
+
+/*создаём обёртку для контента и табов*/
+.wramp {
+  display: grid;
+  grid-template-columns: 160px 470px;
+  margin: 100px 300px 0 300px;
+  grid-column-gap: 70px;
+}
+
+/*задаём стили меню*/
+.menubar-tab {
+  cursor: pointer;
+  line-height: 2.6;
+  color: #337ab7;
+  border-bottom: 1px solid #ddd;
+  height: 40px;
+  text-align: center;
+}
+
+.menubar-tab:hover {
+  color: #fff;
+  border: 1px solid rgb(255 255 255 / 50%);
+  background-color: #337ab7;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 10px 10px 10px rgba(0,0,0,0.22);
+  transition: .3s;
+}
+
+/*задаём стили кнопок*/
+.menubar-tabs {
+  display: flex;
+  flex-direction: column;  
+  list-style-type: none;
+  margin-block-start: 0em;
+  padding-inline-start: 0px;
+  border: 1px solid #ddd;
+}
+
+/*класс для кнопок*/
+.active {
+  background-color: rgb(51 122 183 / 60%);
+  color: white;
+}
+
+.menubar-tabs a {
+  text-decoration: none;  
+}
+
+/*скрываем и показываем контент при выборе*/
+.content {
+  padding: 20px;
+}
+
+.tabs-content {
+  border: 1px solid #dddddd;
+}
+
+.tabs-content>div:not(.menubar-tab) {
+  display: none;
+}
+
+.tabs-content>div:target {
+  display: block;
+}
